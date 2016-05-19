@@ -1,0 +1,364 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+html{
+	font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+}
+#storeImageBox{
+	width : 100%;
+	height: 2.3rem;
+	overflow: hidden;
+	position: relative;
+	.full{
+		width : 100%;
+		height : 100%;		
+	}
+	#animateImageBox{
+		.full;
+		position: relative;
+		transition: all 0.8s;
+		-webkit-transition : all 0.8s;
+		right: 0;
+		div{
+			.full;
+			position:absolute;
+			img{
+				display: block;
+				position: absolute;
+				.full;
+			}
+			.bottomShadowText{
+				width: 100%;
+				height: 0.4rem;
+				background-color: rgba(39,40,34, 0.8);
+				position:absolute;
+				left:0;
+				bottom : 0;
+				z-index : 999;
+			}
+		}
+		>div:nth-child(2){
+			left: 100%;
+		}
+		>div:nth-child(3){
+			left: 200%;
+		}
+	}
+	#circleBox{
+		position: absolute;
+		bottom: 0.1rem;
+		left: 50%;
+		margin-left: -0.225rem;
+		z-index: 1000;
+		div{
+			border-radius: 100px;
+			width:   0.1rem;
+			height: 0.1rem;
+			background-color: #ffffff;
+			float: left;
+			margin-left: 0.05rem;
+		}
+		div:nth-child(1){
+			background-color: #666;
+		}
+	}
+	.commonTopCircle{
+		width: 0.4rem;
+		height : 0.4rem;
+		position: absolute;
+		border-radius: 100px;
+		background: rgba(39,40,34, 0.6);
+		top : 0.1rem;		
+	}
+	.commomBack(@which) when(@which = 'left'){
+		.commonTopCircle;
+		left: 0.1rem;
+	}
+	.commomBack(@which) when(@which = 'right'){
+		.commonTopCircle;
+		right: 0.1rem;
+	}
+
+	#back{
+		.commomBack('left');
+	}
+	#collect{
+		.commomBack('right');
+	}
+
+	#back,#collect{
+		img{
+			display: block;
+			width: 70%;
+			height: 70%;
+			position:absolute;
+			left:50%;
+			top : 50%;
+			margin-left: -35%;
+			margin-top: -35%;
+		}
+	}
+}
+.bottomShadowText{
+	span{
+		display: block;
+		position: absolute;
+		height: 0.4rem;
+		line-height: 0.4rem;
+		left: 0.1rem;
+		color:#ffffff;
+		font-size: 0.15rem;
+	}
+}
+#mainText{
+	width: 100%;
+	height: 1rem;
+	box-shadow: 0 0 0 3px #888;
+	position: relative;
+	.pcommon(@paddingTop){
+		font-weight: bold;
+		color: #757575;
+		text-indent: 0.2rem;
+		padding-top: @paddingTop;
+	}
+	>p:nth-child(1){
+		font-size: 0.17rem;
+		.pcommon(0.13rem);
+	}
+	>p:nth-child(2){
+		font-size: 0.13rem;
+		.pcommon(0.08rem);
+		span:nth-child(1){
+			color: #DE4F3E;
+			margin-right: 0.2rem;
+		}
+	}
+	#localBox{
+		margin-top: 0.1rem;
+		margin-left: 0.17rem;
+		#localImageBox{
+			width: 0.2rem;
+			height: 0.2rem;
+			float: left;
+			img{
+				display:block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		div:nth-child(2){
+			font-size: 0.13rem;
+			font-weight: bold;
+			color:#727272;
+		}		
+	}
+	#say{
+		width: 1rem;
+		height: 0.35rem; 
+		line-height: 0.35rem;
+		color: #ffffff;
+		text-align: center;
+		font-weight: bold;
+		font-size: 0.15rem;
+		position: absolute;
+		right:0.3rem;
+		top: 50%;
+		margin-top: -0.175rem;
+		background-color: #F44236;
+		border-radius: 8px;
+	}
+}
+
+#mainText{
+	#sayShadow{
+		display:none;
+		width: 100%;
+		position: fixed;
+		background: rgba(39,40,34,0.8);
+		z-index: 9999;
+		top: 0;
+		left: 0;
+	}
+}
+#sayShadow{
+	.commonForm{
+	    width: 85%;
+	    height: 2.7rem;
+	    background-color: #F44235;
+	    position: absolute;
+	    left: 50%;
+	    margin-left: -42.5%;
+	    top: 45%;
+	    margin-top: -1rem;
+	    z-index: 1001;
+	    border-radius: 5px		
+	}
+	.commonP{
+		color: #ffffff;
+	    text-align: center;
+	    font-weight: bold;
+	    font-size: 0.2rem;
+	    margin-top: 0.25rem;		
+	}
+	.commonMain{
+		width: 85%;
+	    height: 1rem;
+	    background-color: #ffffff;
+	    position: relative;
+	    left: 7.5%;
+	    margin-top: 10%;
+	    border-radius: 5px;
+	}
+	.commonButton{
+		color: #ffffff;
+	    text-align: center;
+	    font-weight: bold;
+	    width: auto;
+	    font-size: 0.18rem;
+	    margin-top: 12%;
+	}
+	#sayForm{
+		.commonForm;
+		p{
+			.commonP;
+		}
+		#sayTextBox{
+			.commonMain;
+			textarea{
+				width: 100%;
+				height: 100%;
+				resize: none;
+				border-radius: 5px;
+				font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+				font-weight: bold;
+				font-size: 0.18rem;
+			}
+			textarea:focus{
+				outline: none;
+			}
+		}
+		#buttonSay{
+			.commonButton;
+		}
+	}
+	#loginForm{
+		.commonForm;
+		p{
+			.commonP;
+		}
+		#inputBox{
+			.commonMain;
+			.lineBox:nth-child(1){
+				border-bottom: 1px solid #CACACA;
+			}
+			.lineBox{
+			    width: 100%;
+			    height: 50%;
+			    position: relative;
+			 	label{
+					font-size: 0.15rem;
+				    text-align: center;
+				    font-weight: bold;
+				    color: #EC5340;
+				    height: 0.5rem;
+				    line-height: 0.5rem;
+				    margin-left: 0.1rem;		 		
+			 	}
+			 	input{
+			 		    width: 80%;
+					    height: 80%;
+					    position: absolute;
+					    left: 20%;
+					    top: 10%;
+					    font-size: 0.15rem;
+					    border: 0;
+			 	}
+			 	input:focus{
+			 		outline: none;
+			 	}			
+			}
+		}
+		#goLogin{
+			.commonButton;
+		}
+	}
+}
+
+#storeContainer{
+	.containerTitle{
+		width : 100%;
+		height : 0.4rem;
+		background-color: #F44236;
+		line-height: 0.4rem;
+		text-align: center;
+		font-size: 0.16rem;
+		color: #ffffff;
+		font-weight: bold;
+		margin-top: 0.08rem;
+	}
+	#menuContent{
+		div{
+			font-size: 0.13rem;
+			color: #777777;
+			margin-left: 0.1rem;
+			padding-bottom: 0.05rem;
+		}
+		margin-top: 0.05rem;
+		box-shadow : 0 3px 0 1px #888;
+	}
+}
+#commentContent{
+	.comment{
+		width: 96%;
+		position: relative;
+		left: 2%;
+		height : 0.8rem;
+		background-color: #fff;
+		box-shadow: 2px 2px 2px 2px #888;
+		border-radius: 5px;
+		margin-top: 0.1rem;
+		.commentPic{
+			width : 0.4rem;
+			height : 0.4rem;
+			background: url(../img/smileLogo.png);
+			background-size: 100% 100%;
+			position: relative;
+			top : 0.05rem;
+			left : 0.05rem;
+			float: left;
+		}
+		.anotherText{
+			width: 80%;
+			position: relative;
+			left: 5%;
+			top : 8%;
+			p{
+				wdith: 100%;
+				color: #757575;
+				font-weight: bold;
+				display: block;
+			}
+			p:nth-child(1){
+				font-size: 0.15rem;
+			}
+			p:nth-child(2){
+				font-size: 0.14rem;
+				span:nth-child(1){
+					color : #E73C34;
+					margin-right: 0.3rem;
+				}
+			}
+		}
+		.mainText{
+			margin-top: 0.1rem;
+			font-size: 0.15rem;
+			margin-left: 5%;
+			color: #707070;
+			font-weight: bold;
+		}
+	}
+}
+#ruihao{
+	color:#666;
+}

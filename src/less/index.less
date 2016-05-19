@@ -1,0 +1,566 @@
+html{
+	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+	height:100%;
+	background: url(../img/back.png);
+	background-size: 100% 100%;
+	background-attachment: fixed;
+}
+.nav-class{
+	width : 30%;
+	height :  0.42rem;
+	position: relative;
+	top: 0.14rem;
+	background-color: #FFCE05;
+	float: left;
+}
+
+#container{
+	#header{
+		width:100%;
+		height: 0.5rem;
+		background-color: #FFCE05;
+		position:fixed;
+		z-index: 1000;
+		line-height: 0.5rem;
+		font-size: 0.2rem;
+		color:#fff;
+		font-weight: bold;
+		#xiyoulogo{
+			width : 14%;
+			height: 0.4rem;
+			background: url(../img/xiyoulogo.png);
+			background-size: 100% 100%;
+			margin-top: 0.05rem;
+			float: left;
+			margin-left: 27%;
+			margin-right: 2%;
+		}
+	}
+	#navBox{
+		width: 96%;
+		position:relative;
+		// position: fixed;
+		left : 2%;
+		top: 0.5rem;
+		height: 0.7rem;
+		.nav:nth-child(1){
+			margin-left: 1%;
+			.nav-class;
+		}
+		.nav:nth-child(2){
+			margin-left: 4%;
+			margin-right: 4%;
+			.nav-class;
+
+		}
+		.nav:nth-child(3){
+			margin-right: 1%;
+			.nav-class;
+		}
+	}
+}
+.nav{
+	.navImage{
+		display: block;
+		width : 50%;
+		height : 0.4rem;
+		position : absolute;
+		left : 50%;
+		top : 50%;
+		margin-top: -0.2rem;
+		margin-left : -25%;
+	}
+}
+.nowContent{
+	display: block;
+}
+.otherContent{
+	display: none;
+}
+#content{
+	position: relative;
+	top: 0.5rem;
+}
+#home{
+	#backImageBox{
+		width: 94%;
+		position: relative;
+		left: 3%;
+		height:1.8rem;
+		background-color: #F2F2F2;
+		border-radius: 5px;
+		#overImageBox{
+			overflow: hidden;
+			width: 96%;
+			height: 96%;
+			position: relative;
+			left: 2%;
+			top: 2%;
+			background-color: #000;
+		}
+	}
+}
+.full{
+	width: 100%;
+	height: 100%;
+}
+#imageBox{
+	.full;
+	position: absolute;
+	right: 0%;
+	transition : all 1s;
+	div{
+		position:absolute;
+		.full;
+	}
+	div:nth-child(1){
+		background: url(../img/lunbo/f1.png);
+		background-size: 100% 100%;
+	}
+	div:nth-child(2){
+		background: url(../img/lunbo/f2.png);
+		background-size: 100% 100%;
+		left: 100%;		
+	}
+	div:nth-child(3){
+		background: url(../img/lunbo/f3.png);
+		background-size: 100% 100%;		
+		left: 200%;	
+	}
+	div:nth-child(4){
+		background: url(../img/lunbo/f4.png);
+		background-size: 100% 100%;
+		left: 300%;	
+	}
+}
+
+#overImageBox{
+	#circleBox{
+		width: 40%;
+		height : 10%;
+		position: absolute;
+		left: 50%;
+		margin-left: -20%;
+		bottom: 5%;
+		.circle{
+			width: 12.5%;
+			height: 80%;
+			border-radius: 100%;
+			background-color: #fff;
+			float: left;
+			margin-left: 10%;
+		}
+	}
+}
+
+#topFood{
+	position: relative;
+	margin-top: 0.1rem;
+	#topText{
+		width: 100%;
+		height: 0.4rem;
+		background-color: #FFCE05;
+		.toplogo{
+			width: 8%;
+			height : 50%;
+			background: url(../img/top.png);
+			background-size: 100% 100%;
+			float: left;
+			position:relative;
+			top: 25%;
+		}
+		.toplogo:nth-child(1){
+			margin-left: 32%;
+		}
+		p{
+			float: left;
+			display: block;
+			height: 0.4rem;
+			line-height: 0.4rem;
+			font-size: 0.23rem;
+			color: #F44236;
+			font-weight: bold;
+		}
+	}
+}
+
+#storeBox,#allstoreBox,#ItemBox{
+		width:100%;
+		#model{
+			display: none;
+		}
+		.store{
+			width: 96%;
+			position:relative;
+			left : 2%;
+			height: 1.1rem;
+			background-color: #fff;
+			box-shadow: 2px 2px 2px 2px #888;
+			border-radius: 5px;
+			margin-top: 0.1rem;
+			.logoBox{
+				width:30%;
+				height:0;
+				padding-bottom: 0.9rem;
+				position:relative;
+				top: 0.1rem;
+				left: 0.05rem;
+				overflow: hidden;
+				.logoPic{
+					width: 100%;
+					height: 0.9rem;
+					display: block;			
+				}
+			}
+			>div{
+				float: left;
+			}
+		}
+}
+.store{
+	.storeText_first{
+		// width: 30%;
+		height: 1.1rem;
+		margin-left: 0.15rem;
+		p{
+			margin-bottom: 0.05rem;
+		}
+		p:nth-child(1){
+			font-size: 0.2rem;
+			color: #747474;
+			font-weight: bold;
+			margin-top: 0.15rem;
+		}
+		p:nth-child(2){
+			color: #E73C34;
+			font-size: 0.15rem;
+			font-weight: 700;
+		}
+		p:nth-child(3){
+			font-size: 0.15rem;
+		}
+	}
+	.storeText_second{
+		width: 40%;
+		position: absolute;
+		right : 0.15rem;
+		height: 0.5rem;
+		margin-top: 0.47rem;
+		p{
+			text-align: right;
+			color:#767676;
+			font-size: 0.150rem;
+			font-weight: bold;
+		}
+		p:nth-child(1){
+			margin-bottom: 0.05rem;
+		}
+	}
+}
+
+#search_choice{
+	#search{
+		width: 94%;
+		height: 0.45rem;
+		border-radius: 0.5rem;
+		position: relative;
+		left: 3%;
+		border: #8E8E8E 3px solid;
+		#searchPic{
+			width: 15%;
+			height: 80%;
+			left: 5%;
+			position:relative;
+			top: 10%;
+			float: left;
+			background: url(../img/search.png);
+			background-size: 100% 100%;
+		}
+		input{
+			width: 80%;
+			height: 0.45rem;
+			font-size: 0.2rem;
+			position: relative;
+			left:5%;
+			background:rgba(0,0,0,0);
+			border:0;
+			font-weight: bold;
+		}
+		input:focus{
+			outline: none;
+		}
+	}
+	#choice{
+		width: 100%;
+		height : 0.4rem;
+		margin-top: 0.05rem;
+		.firstNav{
+			float: left;
+			width : 30%;
+			height: 100%;
+			text-align: center;
+			line-height: 0.4rem;
+			color: #7B7B7B;
+			font-size: 0.19rem;
+			background-color: #FCFCFC;
+			border: 1px solid #F2F2F0;
+		}
+		.firstNav:nth-child(1){
+			margin-left: 4%;
+		}
+		.firstNav:nth-child(3){
+			margin-right: 4%;
+		}
+	}
+	#placeChoiceBox{
+		width: 31%;
+		margin-left: 4%;
+		background-color: #F2F2F0;
+		display: none;
+		.secondNav{
+			width: 96%;
+			margin-top: 0.02rem;
+			height: 0.35rem;
+			text-align: center;
+			line-height: 0.35rem;
+			background-color: #FCFCFC;
+			position:relative;
+			left: 2%;
+			font-size: 0.15rem;
+			color:#7B7B7B;
+			text-align: left;
+			text-indent: 0.1rem;
+
+		}
+	}
+}
+#food{
+	#getMore{
+		width: 100%;
+		height : 0.5rem;
+		line-height: 0.5rem;
+		margin-top: 0.15rem;
+		text-align: center;
+		font-size: 0.19rem;
+		color: #66645C;
+		background-color: #FFCE05;
+
+	}
+}
+
+#me{
+	#loginBack{
+		width : 100%;
+		height : 1.7rem;
+		position: relative;
+		#backImg{
+			width: 100%;
+			height : 100%;
+			background: url(../img/loignBg.jpg);
+			background-size: 100% 100%;
+			position: absolute;
+			filter : blur(5px);
+			-webkit-filter : blur(5px);
+		}
+	}
+}
+#loginBack{
+	#loginPicBox{
+		width: 0.6rem;
+		height: 0.6rem;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-top: -0.3rem;
+		margin-left: -0.3rem;
+		z-index: 999;
+		background-color: #fff;
+		border-radius: 100px;
+		border: 1px solid #FFCE05;
+		img{
+			border-radius: 100px;
+			display: block;
+			width:100%;
+			height :100%;
+			position:relative;
+		}
+	}
+}
+#shadow{
+		position: fixed;
+		top: 0;
+		width:100%;
+		z-index: 1000;
+		background: rgba(33,33,31, 0.8);
+		#loginForm{
+			width: 85%;
+			height: 2.7rem;
+			background-color: #F44235;
+			position:absolute;
+			left : 50%;
+			margin-left: -42.5%;
+			top: 45%;
+			margin-top: -1rem;
+			z-index: 1001;
+			border-radius: 5px;
+		}
+}
+
+.formFont{
+	color: #ffffff;
+	text-align: center;
+	font-weight: bold;
+}
+#loginForm{
+	p{
+		.formFont;
+		font-size: 0.2rem;
+		margin-top: 0.25rem;
+	}
+	#inputBox{
+		width: 85%;
+		height: 1rem;
+		background-color: #ffffff;
+		position: relative;
+		left: 7.5%;
+		margin-top: 10%;
+		border-radius: 5px;
+	}
+	#goLogin{
+		.formFont;
+		width:auto;
+		font-size: 0.18rem;
+		margin-top: 12%;
+	}
+}
+#inputBox{
+	.lineBox{
+		width: 100%;
+		height:50%;
+		position:relative;
+		label{
+			font-size: 0.15rem;
+			text-align: center;
+			font-weight: bold;
+			color: #EC5340;
+			height: 0.5rem;
+			line-height: 0.5rem;
+			margin-left: 0.1rem;
+		}
+		input{
+			@base : 80%;
+			width: @base;
+			height: @base;
+			position:absolute;
+			left: 100 - @base;
+			top: (100 - @base)/2;
+			font-size: 0.15rem;
+			border: 0;
+		}
+		input:focus{
+			outline: none;
+		}
+	}
+	.lineBox:nth-child(1){
+		border-bottom: 1px solid #CACACA;
+	}
+}
+
+#threeBox{
+	.circleText{
+		text-align: center;
+		color: #666;
+		font-size: 0.15rem;
+		font-weight: bold;		
+	}
+	.oneBox{
+		display: inline-block;
+		room: 1;
+		margin-left: 16%;
+		.circleText;
+	}
+	.oneCircle{
+		width : 0.4rem;
+		height : 0.4rem;
+		line-height: 0.4rem;
+		border-radius: 100px;
+		background-color: #FFCE05;
+		box-shadow: 2px 2px 1px 1px #888;
+		.circleText;
+	}
+	margin: 0.15rem 0 0.15rem 0;
+}
+
+#mainItem{
+	#navItem{
+		text-align: center;
+		font-size: 0.16rem;
+		line-height: 0.3rem;
+		height: 0.3rem;
+		font-weight: bold;
+		color: #666;
+		background-color: #FFCE05;
+	}
+	#ItemBox{
+		position: relative;
+		.item{
+			position: absolute;
+		}
+	}
+}
+
+.item{
+	width: 100%;
+	.comment{
+		width: 96%;
+		position: relative;
+		left: 2%;
+		height : 0.8rem;
+		background-color: #fff;
+		box-shadow: 2px 2px 2px 2px #888;
+		border-radius: 5px;
+		margin-top: 0.1rem;
+		.commentPic{
+			width : 0.4rem;
+			height : 0.4rem;
+			background: url(../img/smileLogo.png);
+			background-size: 100% 100%;
+			position: relative;
+			top : 0.05rem;
+			left : 0.05rem;
+			float: left;
+		}
+		.anotherText{
+			width: 80%;
+			position: relative;
+			left: 5%;
+			top : 8%;
+			p{
+				wdith: 100%;
+				color: #757575;
+				font-weight: bold;
+				display: block;
+			}
+			p:nth-child(1){
+				font-size: 0.15rem;
+			}
+			p:nth-child(2){
+				font-size: 0.14rem;
+				span:nth-child(1){
+					color : #E73C34;
+					margin-right: 0.3rem;
+				}
+			}
+		}
+		.mainText{
+			margin-top: 0.1rem;
+			font-size: 0.15rem;
+			margin-left: 5%;
+			color: #707070;
+			font-weight: bold;
+		}
+	}
+}
+.noneBlock{
+	display: none;
+}
